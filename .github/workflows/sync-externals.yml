@@ -9,6 +9,7 @@ jobs:
     steps:
       - name: Sync CPM.cmake
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: cpm-cmake/CPM.cmake
@@ -20,6 +21,7 @@ jobs:
 
       - name: Sync CMakeModules
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: rpavlik/cmake-modules
@@ -31,6 +33,7 @@ jobs:
 
       - name: Sync CMRC
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: vector-of-bool/cmrc
@@ -42,6 +45,7 @@ jobs:
 
       - name: Sync iOS.cmake
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: leetal/ios-cmake
@@ -53,6 +57,7 @@ jobs:
 
       - name: Sync DirectX Shader Compiler
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: microsoft/DirectXShaderCompiler
@@ -64,6 +69,7 @@ jobs:
 
       - name: Sync DirectX Tex
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: microsoft/DirectXTex
@@ -75,6 +81,7 @@ jobs:
 
       - name: Sync DirectX Headers
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: microsoft/DirectX-Headers
@@ -86,6 +93,7 @@ jobs:
 
       - name: Sync HLSLpp
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: redorav/hlslpp
@@ -97,6 +105,7 @@ jobs:
 
       - name: Sync TaskFlow
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: taskflow/taskflow
@@ -108,6 +117,7 @@ jobs:
 
       - name: Sync Boost Nowide (develop)
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: boostorg/nowide
@@ -119,6 +129,7 @@ jobs:
 
       - name: Sync Boost Nowide (standalone)
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: boostorg/nowide
@@ -130,6 +141,7 @@ jobs:
 
       - name: Sync Magic Enum
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: Neargye/magic_enum
@@ -141,6 +153,7 @@ jobs:
 
       - name: Sync CLI11
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: CLIUtils/CLI11
@@ -152,6 +165,7 @@ jobs:
 
       - name: Sync FMT
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: fmtlib/fmt
@@ -163,17 +177,19 @@ jobs:
 
       - name: Sync Catch2
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: catchorg/Catch2
           target_repository: MethanePowered/Catch2
-          upstream_branch: develop
+          upstream_branch: devel
           target_branch: devel
           force: true
           tags: true
 
       - name: Sync FastNoise2
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: Auburn/FastNoise2
@@ -185,6 +201,7 @@ jobs:
 
       - name: Sync Tracy
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: wolfpld/tracy
@@ -196,6 +213,7 @@ jobs:
 
       - name: Sync SPIRV Cross
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: KhronosGroup/SPIRV-Cross
@@ -207,6 +225,7 @@ jobs:
 
       - name: Sync Vulkan Headers
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: KhronosGroup/Vulkan-Headers
@@ -218,6 +237,7 @@ jobs:
 
       - name: Sync FTX UI
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: ArthurSonzogni/FTXUI
@@ -229,6 +249,7 @@ jobs:
 
       - name: Sync STB
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: nothings/stb
@@ -240,6 +261,7 @@ jobs:
 
       - name: Sync ITT API
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: intel/ittapi
@@ -251,6 +273,7 @@ jobs:
 
       - name: Sync OpenImageIO
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: AcademySoftwareFoundation/OpenImageIO
@@ -262,6 +285,7 @@ jobs:
 
       - name: Sync OpenCppCoverage
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: OpenCppCoverage/OpenCppCoverage
@@ -273,6 +297,7 @@ jobs:
 
       - name: Sync Filter Sarif
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: zbazztian/filter-sarif
@@ -284,6 +309,7 @@ jobs:
 
       - name: Sync GHA Setup Ninja
         uses: TobKed/github-forks-sync-action@master
+        continue-on-error: true
         with:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: seanmiddleditch/gha-setup-ninja
