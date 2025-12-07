@@ -1,0 +1,294 @@
+name: '♻️ Sync Externals'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sync_externals:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync CPM.cmake
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: cpm-cmake/CPM.cmake
+          target_repository: MethanePowered/CPM.cmake
+          upstream_branch: master
+          target_branch: master
+          force: true
+          tags: true
+
+      - name: Sync CMakeModules
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: rpavlik/cmake-modules
+          target_repository: MethanePowered/CMakeModules
+          upstream_branch: main
+          target_branch: main
+          force: true
+          tags: true
+
+      - name: Sync CMRC
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: vector-of-bool/cmrc
+          target_repository: MethanePowered/CMRC
+          upstream_branch: master
+          target_branch: master
+          force: true
+          tags: true
+
+      - name: Sync iOS.cmake
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: leetal/ios-cmake
+          target_repository: MethanePowered/iOS.cmake
+          upstream_branch: master
+          target_branch: master
+          force: true
+          tags: true
+
+      - name: Sync DirectX Shader Compiler
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: microsoft/DirectXShaderCompiler
+          target_repository: MethanePowered/DirectXShaderCompiler
+          upstream_branch: main
+          target_branch: main
+          force: true
+          tags: true
+
+      - name: Sync DirectX Tex
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: microsoft/DirectXTex
+          target_repository: MethanePowered/DirectXTex
+          upstream_branch: main
+          target_branch: main
+          force: true
+          tags: true
+
+      - name: Sync DirectX Headers
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: microsoft/DirectX-Headers
+          target_repository: MethanePowered/DirectXHeaders
+          upstream_branch: main
+          target_branch: main
+          force: true
+          tags: true
+
+      - name: Sync HLSLpp
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: redorav/hlslpp
+          target_repository: MethanePowered/HLSLpp
+          upstream_branch: master
+          target_branch: master
+          force: true
+          tags: true
+
+      - name: Sync TaskFlow
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: taskflow/taskflow
+          target_repository: MethanePowered/TaskFlow
+          upstream_branch: master
+          target_branch: master
+          force: true
+          tags: true
+
+      - name: Sync Boost Nowide (develop)
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: boostorg/nowide
+          target_repository: MethanePowered/BoostNowide
+          upstream_branch: develop
+          target_branch: develop
+          force: true
+          tags: true
+
+      - name: Sync Boost Nowide (standalone)
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: boostorg/nowide
+          target_repository: MethanePowered/BoostNowide
+          upstream_branch: standalone
+          target_branch: standalone
+          force: true
+          tags: true
+
+      - name: Sync Magic Enum
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: Neargye/magic_enum
+          target_repository: MethanePowered/MagicEnum
+          upstream_branch: master
+          target_branch: master
+          force: true
+          tags: true
+
+      - name: Sync CLI11
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: CLIUtils/CLI11
+          target_repository: MethanePowered/CLI11
+          upstream_branch: main
+          target_branch: main
+          force: true
+          tags: true
+
+      - name: Sync FMT
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: fmtlib/fmt
+          target_repository: MethanePowered/FMT
+          upstream_branch: master
+          target_branch: master
+          force: true
+          tags: true
+
+      - name: Sync Catch2
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: catchorg/Catch2
+          target_repository: MethanePowered/Catch2
+          upstream_branch: develop
+          target_branch: devel
+          force: true
+          tags: true
+
+      - name: Sync FastNoise2
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: Auburn/FastNoise2
+          target_repository: MethanePowered/FastNoise2
+          upstream_branch: master
+          target_branch: master
+          force: true
+          tags: true
+
+      - name: Sync Tracy
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: wolfpld/tracy
+          target_repository: MethanePowered/Tracy
+          upstream_branch: master
+          target_branch: master
+          force: true
+          tags: true
+
+      - name: Sync SPIRV Cross
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: KhronosGroup/SPIRV-Cross
+          target_repository: MethanePowered/SPIRVCross
+          upstream_branch: master
+          target_branch: master
+          force: true
+          tags: true
+
+      - name: Sync Vulkan Headers
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: KhronosGroup/Vulkan-Headers
+          target_repository: MethanePowered/VulkanHeaders
+          upstream_branch: main
+          target_branch: main
+          force: true
+          tags: true
+
+      - name: Sync FTX UI
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: ArthurSonzogni/FTXUI
+          target_repository: MethanePowered/FTXUI
+          upstream_branch: master
+          target_branch: master
+          force: true
+          tags: true
+
+      - name: Sync STB
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: nothings/stb
+          target_repository: MethanePowered/STB
+          upstream_branch: master
+          target_branch: master
+          force: true
+          tags: true
+
+      - name: Sync ITT API
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: intel/ittapi
+          target_repository: MethanePowered/IttApi
+          upstream_branch: master
+          target_branch: master
+          force: true
+          tags: true
+
+      - name: Sync OpenImageIO
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: AcademySoftwareFoundation/OpenImageIO
+          target_repository: MethanePowered/OpenImageIO
+          upstream_branch: master
+          target_branch: master
+          force: true
+          tags: true
+
+      - name: Sync OpenCppCoverage
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: OpenCppCoverage/OpenCppCoverage
+          target_repository: MethanePowered/OpenCppCoverage
+          upstream_branch: master
+          target_branch: master
+          force: true
+          tags: true
+
+      - name: Sync Filter Sarif
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: zbazztian/filter-sarif
+          target_repository: MethanePowered/FilterSarif
+          upstream_branch: master
+          target_branch: master
+          force: true
+          tags: true
+
+      - name: Sync GHA Setup Ninja
+        uses: TobKed/github-forks-sync-action@master
+        with:
+          github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          upstream_repository: seanmiddleditch/gha-setup-ninja
+          target_repository: MethanePowered/gha-setup-ninja
+          upstream_branch: master
+          target_branch: master
+          force: true
+          tags: true
