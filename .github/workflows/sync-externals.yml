@@ -242,7 +242,7 @@ jobs:
           github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           upstream_repository: ArthurSonzogni/FTXUI
           target_repository: MethanePowered/FTXUI
-          upstream_branch: master
+          upstream_branch: main
           target_branch: master
           force: true
           tags: true
